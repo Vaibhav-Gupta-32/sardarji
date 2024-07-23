@@ -1,0 +1,270 @@
+<div class="col-lg-6">
+    <div class="taxi_s_form overflow-hidden mb-3  me-0"
+        style="padding-bottom: 0%;padding:0%;padding-top: 10px;">
+
+        <div class="slider_form_title" style="max-height: 495px !important;">
+            <h2 class="mb-5 fw-bold" style="height: 20px;">Book your <span>Taxi</span></h2>
+            <div class="row tab" style="margin-left: 0%; margin: 2px;">
+                <button class="btn btn-block tablinks col-lg-4 active"
+                    style="font-size: 13px;font-weight: 550;"
+                    onclick="openForm(event, 'Outstation-RoundTrip')">Outstation-RoundTrip</button>
+                <button class="btn btn-block tablinks col-lg-4"
+                    style="font-size: 13px;font-weight: 550;"
+                    onclick="openForm(event, 'Outstation-Oneway')">Outstation-Oneway</button>
+                <button class="btn btn-block tablinks col-lg-4"
+                    style="font-size: 13px;font-weight: 550;"
+                    onclick="openForm(event, 'Local-FullDay')">Local-FullDay</button>
+            </div>
+            <!-- first form -->
+            <form action="" method="POST" id="Outstation-RoundTrip" class="tabcontent"
+                style="display: block;">
+                <div class="row">
+                    <div class="col-lg-12 form-group">
+                        <input type="hidden" name="form_name" id="form_name"
+                            value="Outstation-RoundTrip" class="form-control">
+                        <label for="" class="form-label">From<span
+                                class="text-danger">*</span></label>
+                        <select class=" form-control" name="from_place" id="from_place">
+                            <option value="">- - Select City - -</option>
+                            <option value="Raipur">Raipur</option>
+                            <option value="Bilaspur">Bilaspur</option>
+                            <option value="Durg">Durg</option>
+                            <option value="Bhilai">Bhilai</option>
+                            <option value="Ambikapur">Ambikapur</option>
+                            <option value="Raigarh">Raigarh</option>
+                            <option value="Kabirdham">Kabirdham</option>
+                            <option value="Mungeli">Mungeli</option>
+                            <option value="Janjgir">Janjgir</option>
+                            <option value="Champa">Champa</option>
+                            <option value="Arang">Arang</option>
+                            <option value="Dhamtari">Dhamtari</option>
+                            <option value="Kanker">Kanker</option>
+                            <option value="Dantewada">Dantewada</option>
+                            <option value="Sukma">Sukma</option>
+                            <option value="Saraipali">Saraipali</option>
+                            <option value="Saranggarh">Saranggarh</option>
+                            <option value="Rajnandgao">Rajnandgao</option>
+                            <option value="Dongargarh">Dongargarh</option>
+                            <option value="Basana">Basana</option>
+                            <option value="Balod">Balod</option>
+                            <option value="Bemetara">Bemetara</option>
+                            <option value="Korba">Korba</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-12 mt-3 form-group">
+                        <label for="" class="form-label">To<span
+                                class="text-danger">*</span></label>
+                        <select class=" form-control" name="to_place" id="to_place" required>
+                            <option value="">- - Select City - -</option>
+                            <option value="Raipur">Raipur</option>
+                            <option value="Bilaspur">Bilaspur</option>
+                            <option value="Durg">Durg</option>
+                            <option value="Bhilai">Bhilai</option>
+                            <option value="Ambikapur">Ambikapur</option>
+                            <option value="Raigarh">Raigarh</option>
+                            <option value="Kabirdham">Kabirdham</option>
+                            <option value="Mungeli">Mungeli</option>
+                            <option value="Janjgir">Janjgir</option>
+                            <option value="Champa">Champa</option>
+                            <option value="Arang">Arang</option>
+                            <option value="Dhamtari">Dhamtari</option>
+                            <option value="Kanker">Kanker</option>
+                            <option value="Dantewada">Dantewada</option>
+                            <option value="Sukma">Sukma</option>
+                            <option value="Saraipali">Saraipali</option>
+                            <option value="Saranggarh">Saranggarh</option>
+                            <option value="Rajnandgao">Rajnandgao</option>
+                            <option value="Dongargarh">Dongargarh</option>
+                            <option value="Basana">Basana</option>
+                            <option value="Balod">Balod</option>
+                            <option value="Bemetara">Bemetara</option>
+                            <option value="Korba">Korba</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-12 form-group mt-3">
+                        <label for="" class="form-label">Departure<span
+                                class="text-danger">*</span></label>
+                        <input class="form-control" type="date" name="departure_date"
+                            id="datetimepicker1" required>
+
+                    </div>
+
+                    <div class="col-lg-12 form-group mt3">
+                        <label for="" class="form-label">Return<span
+                                class="text-danger">*</span></label>
+                        <input class="form-control" type="date" name="return_date"
+                            id="datetimepicker1" required>
+                    </div>
+
+                    <button class="btn btn-success text-center" name="submit"
+                        id="submit">SUBMIT</button>
+
+
+                </div>
+            </form>
+
+            <!-- second form -->
+            <form action="" method="POST" id="Outstation-Oneway" class="tabcontent">
+                <div class="row">
+                    <div class="col-lg-12 form-group ">
+                        <input type="hidden" name="form_name" id="form_name"
+                            value="Outstation-Oneway">
+                        <label for="" class="form-label">From<span
+                                class="text-danger">*</span></label>
+                        <select class="form-control" name="from_place" id="from_place">
+                            <option value="">- - Select City - -</option>
+                            <option value="Raipur">Raipur</option>
+                            <option value="Bilaspur">Bilaspur</option>
+                            <option value="Durg">Durg</option>
+                            <option value="Bhilai">Bhilai</option>
+                            <option value="Ambikapur">Ambikapur</option>
+                            <option value="Raigarh">Raigarh</option>
+                            <option value="Kabirdham">Kabirdham</option>
+                            <option value="Mungeli">Mungeli</option>
+                            <option value="Janjgir">Janjgir</option>
+                            <option value="Champa">Champa</option>
+                            <option value="Arang">Arang</option>
+                            <option value="Dhamtari">Dhamtari</option>
+                            <option value="Kanker">Kanker</option>
+                            <option value="Dantewada">Dantewada</option>
+                            <option value="Sukma">Sukma</option>
+                            <option value="Saraipali">Saraipali</option>
+                            <option value="Saranggarh">Saranggarh</option>
+                            <option value="Rajnandgao">Rajnandgao</option>
+                            <option value="Dongargarh">Dongargarh</option>
+                            <option value="Basana">Basana</option>
+                            <option value="Balod">Balod</option>
+                            <option value="Bemetara">Bemetara</option>
+                            <option value="Korba">Korba</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-12 form-group  mt-3">
+                        <label for="" class="form-label">To<span
+                                class="text-danger">*</span></label>
+                        <select class="form-control" name="to_place" id="" name="to_place" required>
+                            <option value="">- - Select City - -</option>
+                            <option value="Raipur">Raipur</option>
+                            <option value="Bilaspur">Bilaspur</option>
+                            <option value="Durg">Durg</option>
+                            <option value="Bhilai">Bhilai</option>
+                            <option value="Ambikapur">Ambikapur</option>
+                            <option value="Raigarh">Raigarh</option>
+                            <option value="Kabirdham">Kabirdham</option>
+                            <option value="Mungeli">Mungeli</option>
+                            <option value="Janjgir">Janjgir</option>
+                            <option value="Champa">Champa</option>
+                            <option value="Arang">Arang</option>
+                            <option value="Dhamtari">Dhamtari</option>
+                            <option value="Kanker">Kanker</option>
+                            <option value="Dantewada">Dantewada</option>
+                            <option value="Sukma">Sukma</option>
+                            <option value="Saraipali">Saraipali</option>
+                            <option value="Saranggarh">Saranggarh</option>
+                            <option value="Rajnandgao">Rajnandgao</option>
+                            <option value="Dongargarh">Dongargarh</option>
+                            <option value="Basana">Basana</option>
+                            <option value="Balod">Balod</option>
+                            <option value="Bemetara">Bemetara</option>
+                            <option value="Korba">Korba</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-12 form-group mt-3">
+                        <label for="" class="form-label">Departure<span
+                                class="text-danger">*</span></label>
+                        <input class="form-control" type="date" name="departure_date"
+                            id="departure_date" required>
+
+                    </div>
+
+                    <button class="btn btn-success" name="submit">SUBMIT</button>
+
+
+                </div>
+            </form>
+
+            <!-- Third form -->
+            <form action="" method="POST" id="Local-FullDay" class="tabcontent">
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <input type="hidden" name="form_name" id="form_name" value="Local-FullDay">
+                        <label for="" class="form-label">From<span
+                                class="text-danger">*</span></label>
+                        <select class="form-control" name="from_place" id="from_place">
+                            <option value="">- - Select City - -</option>
+                            <option value="Raipur">Raipur</option>
+                            <option value="Bilaspur">Bilaspur</option>
+                            <option value="Durg">Durg</option>
+                            <option value="Bhilai">Bhilai</option>
+                            <option value="Ambikapur">Ambikapur</option>
+                            <option value="Raigarh">Raigarh</option>
+                            <option value="Kabirdham">Kabirdham</option>
+                            <option value="Mungeli">Mungeli</option>
+                            <option value="Janjgir">Janjgir</option>
+                            <option value="Champa">Champa</option>
+                            <option value="Arang">Arang</option>
+                            <option value="Dhamtari">Dhamtari</option>
+                            <option value="Kanker">Kanker</option>
+                            <option value="Dantewada">Dantewada</option>
+                            <option value="Sukma">Sukma</option>
+                            <option value="Saraipali">Saraipali</option>
+                            <option value="Saranggarh">Saranggarh</option>
+                            <option value="Rajnandgao">Rajnandgao</option>
+                            <option value="Dongargarh">Dongargarh</option>
+                            <option value="Basana">Basana</option>
+                            <option value="Balod">Balod</option>
+                            <option value="Bemetara">Bemetara</option>
+                            <option value="Korba">Korba</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-12 form-group" style="margin-top:6px;">
+                        <label for="" class="form-label">To<span
+                                class="text-danger">*</span></label>
+                        <select class="form-control" name="to_place" id="to_place" required>
+                            <option value="">- - Select City - -</option>
+                            <option value="Raipur">Raipur</option>
+                            <option value="Bilaspur">Bilaspur</option>
+                            <option value="Durg">Durg</option>
+                            <option value="Bhilai">Bhilai</option>
+                            <option value="Ambikapur">Ambikapur</option>
+                            <option value="Raigarh">Raigarh</option>
+                            <option value="Kabirdham">Kabirdham</option>
+                            <option value="Mungeli">Mungeli</option>
+                            <option value="Janjgir">Janjgir</option>
+                            <option value="Champa">Champa</option>
+                            <option value="Arang">Arang</option>
+                            <option value="Dhamtari">Dhamtari</option>
+                            <option value="Kanker">Kanker</option>
+                            <option value="Dantewada">Dantewada</option>
+                            <option value="Sukma">Sukma</option>
+                            <option value="Saraipali">Saraipali</option>
+                            <option value="Saranggarh">Saranggarh</option>
+                            <option value="Rajnandgao">Rajnandgao</option>
+                            <option value="Dongargarh">Dongargarh</option>
+                            <option value="Basana">Basana</option>
+                            <option value="Balod">Balod</option>
+                            <option value="Bemetara">Bemetara</option>
+                            <option value="Korba">Korba</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-12 form-group mt-3">
+                        <label for="" class="form-label">Departure<span
+                                class="text-danger">*</span></label>
+                        <input type="date" name="departure_date" id="departure_date"
+                            class="form-control" required>
+
+                    </div>
+
+                    <button class="btn btn-success text-center" name="submit">SUBMIT</button>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

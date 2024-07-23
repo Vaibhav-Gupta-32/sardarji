@@ -61,25 +61,16 @@
 	<script src="maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="things/jquery.geocomplete.html"></script>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<!--slider---->
 
 	<script src="code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<script>
-		$(document).ready(function () {
-			$('.taxi_slider').carousel({
-				interval: 5000 // change the interval time as per your requirement
-			});
-		});
-	</script>
+	
 	<style>
+		/* Ensure images are responsive */
 		body {
 			font-family: Arial;
 		}
@@ -117,7 +108,7 @@
 		.tabcontent {
 			display: none;
 			padding: 6px 12px;
-			border: 1px solid #ccc;
+			/* border: 1px solid #ccc; */
 			border-top: none;
 		}
 
@@ -126,8 +117,6 @@
 </head>
 
 <body data-scroll-animation="true">
-
-
 
 	<!--================Header Area =================-->
 	<header class="header_area menu_eight">
@@ -165,34 +154,31 @@
 		</div>
 	</header> <!--================End Footer Area =================-->
 
-
-	<section class="main_slider_area">
+	<section class="main_slider_area mt-0">
 		<!-- ================ -->
-		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-interval="3000" data-ride="carousel" style="background-image: url('img/home-slider/taxi-slider-1.jpg'); background-size: cover; height:180vh;">
 			<div class="carousel-inner">
-			  <div class="carousel-item active" style="background-image: url('img/home-slider/taxi-slider-1.jpg'); background-size: cover; height: 100vh;">
-				<!-- no need for img tag here -->
-			  </div>
-			  <div class="carousel-item" style="background-image: url('img/home-slider/taxi-slider-2.jpg'); background-size: cover; height: 100vh;">
-				<!-- no need for img tag here -->
-			  </div>
-			  <div class="carousel-item" style="background-image: url('img/home-slider/taxi-slider-2.jpg'); background-size: cover; height: 100vh;">
-				<!-- no need for img tag here -->
-			  </div>
-			  <div class="carousel-item" style="background-image: url('img/home-slider/taxi-slider-1.jpg'); background-size: cover; height: 100vh;">
-				<!-- no need for img tag here -->
-			  </div>
+				<div class="item active" style="background-image: url('img/home-slider/taxi-slider-1.jpg'); background-size: cover; height: 50vh;">
+					<!-- no need for img tag here -->
+				</div>
+				<div class="item" style="background-image: url('img/home-slider/taxi-slider-3.jpg'); background-size: cover; height: 50vh;">
+					<!-- no need for img tag here -->
+				</div>
+				<div class="item" style="background-image: url('img/home-slider/taxi-slider-2.jpg'); background-size: cover; height: 50vh;">
+					<!-- no need for img tag here -->
+				</div>
+				<div class="item" style="background-image: url('img/home-slider/taxi-slider-1.jpg'); background-size: cover; height: 50vh;">
+					<!-- no need for img tag here -->
+				</div>
 			</div>
-		  </div>
 		<!-- ================ -->
 
-		
-		<div class="taxi_slider_text" style="position: absolute;">
+		<div class="taxi_slider_text mt-0 pt-0" style="position:relative;">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-5 d-flex">
+					<div class="col-lg-5">
 						<div class="left_text">
-							<h3 class="wow  fadeInUp animated" data-wow-delay="0.2s"
+							<h3 class=" fw-bold wow   fadeInUp animated" data-wow-delay="0.2s"
 								style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Lets Book
 								<span>Your Taxi</span> <br>Instantly
 							</h3>
@@ -204,122 +190,51 @@
 								More</a>
 						</div>
 					</div>
+
 					<div class="col-lg-7">
-						<div class="taxi_s_form overflow-hidden mb-3 col-lg-8 me-0"
-							style="padding-bottom: 0%;padding:0%;padding-top: 10px;">
-
-							<div class="slider_form_title" style="max-height: 495px !important;">
-								<h2 class="mb-5" style="height: 20px;">Book your <span>Taxi</span></h2>
-								<div class="row tab" style="margin-left: 0%; margin: 2px;">
-									<button class="btn btn-block tablinks col-lg-4 active"
-										style="font-size: 13px;font-weight: 550;"
-										onclick="openForm(event, 'Outstation-RoundTrip')">Outstation-RoundTrip</button>
-									<button class="btn btn-block tablinks col-lg-4"
-										style="font-size: 13px;font-weight: 550;"
-										onclick="openForm(event, 'Outstation-Oneway')">Outstation-Oneway</button>
-									<button class="btn btn-block tablinks col-lg-4"
-										style="font-size: 13px;font-weight: 550;"
-										onclick="openForm(event, 'Local-FullDay')">Local-FullDay</button>
+							<div class=" text-center p-0 m-0 mb-3 text-white" >
+								<h1 class=" fs-3 fw-bold text-white p-2 mt-0"><b>Book your</b> <span class=" text-warning"><b>Taxi</b></span></h1>
+							</div>
+							<div class="row text-white fw-bold p-5 text-justify-center">
+								<div class="col-xs-12 col-sm-4 col-lg-4">
+									<button class="btn btn-danger btn-block mb-3" name="Outstation-Oneway" onclick="openForm(event, 'Outstation-Oneway')">
+										<b>Outstation-Oneway</b>
+									</button>
 								</div>
+								<div class="col-xs-12 col-sm-4 col-lg-4">
+									<button class="btn btn-info btn-block mb-3 " name="Outstation-RoundTrip" onclick="openForm(event, 'Outstation-RoundTrip')">
+										<b>Outstation-RoundTrip</b>
+									</button>
+								</div>
+								<div class="col-xs-12 col-sm-4 col-lg-4">
+									<button class="btn btn-warning btn-block mb-3" name="Local-FullDay" onclick="openForm(event, 'Local-FullDay')">
+										<b>Local-FullDay</b>
+									</button>
+								</div>
+							</div>
+							
+							<!-- Button  -->
+<!-- Form -->
+							
+							<!-- <div class="form_content overflow-hidden p-3 border rounded "> -->
 								<!-- first form -->
-								<form action="" method="POST" id="Outstation-RoundTrip" class="tabcontent"
-									style="display: block;">
-									<div class="row">
-										<div class="col-lg-12 form-group">
-											<input type="hidden" name="form_name" id="form_name"
-												value="Outstation-RoundTrip" class="form-control">
-											<label for="" class="form-label">From<span
-													class="text-danger">*</span></label>
-											<select class=" form-control" name="from_place" id="from_place">
-												<option value="">- - Select City - -</option>
-												<option value="Raipur">Raipur</option>
-												<option value="Bilaspur">Bilaspur</option>
-												<option value="Durg">Durg</option>
-												<option value="Bhilai">Bhilai</option>
-												<option value="Ambikapur">Ambikapur</option>
-												<option value="Raigarh">Raigarh</option>
-												<option value="Kabirdham">Kabirdham</option>
-												<option value="Mungeli">Mungeli</option>
-												<option value="Janjgir">Janjgir</option>
-												<option value="Champa">Champa</option>
-												<option value="Arang">Arang</option>
-												<option value="Dhamtari">Dhamtari</option>
-												<option value="Kanker">Kanker</option>
-												<option value="Dantewada">Dantewada</option>
-												<option value="Sukma">Sukma</option>
-												<option value="Saraipali">Saraipali</option>
-												<option value="Saranggarh">Saranggarh</option>
-												<option value="Rajnandgao">Rajnandgao</option>
-												<option value="Dongargarh">Dongargarh</option>
-												<option value="Basana">Basana</option>
-												<option value="Balod">Balod</option>
-												<option value="Bemetara">Bemetara</option>
-												<option value="Korba">Korba</option>
-											</select>
-										</div>
-
-										<div class="col-lg-12 mt-3 form-group">
-											<label for="" class="form-label">To<span
-													class="text-danger">*</span></label>
-											<select class=" form-control" name="to_place" id="to_place" required>
-												<option value="">- - Select City - -</option>
-												<option value="Raipur">Raipur</option>
-												<option value="Bilaspur">Bilaspur</option>
-												<option value="Durg">Durg</option>
-												<option value="Bhilai">Bhilai</option>
-												<option value="Ambikapur">Ambikapur</option>
-												<option value="Raigarh">Raigarh</option>
-												<option value="Kabirdham">Kabirdham</option>
-												<option value="Mungeli">Mungeli</option>
-												<option value="Janjgir">Janjgir</option>
-												<option value="Champa">Champa</option>
-												<option value="Arang">Arang</option>
-												<option value="Dhamtari">Dhamtari</option>
-												<option value="Kanker">Kanker</option>
-												<option value="Dantewada">Dantewada</option>
-												<option value="Sukma">Sukma</option>
-												<option value="Saraipali">Saraipali</option>
-												<option value="Saranggarh">Saranggarh</option>
-												<option value="Rajnandgao">Rajnandgao</option>
-												<option value="Dongargarh">Dongargarh</option>
-												<option value="Basana">Basana</option>
-												<option value="Balod">Balod</option>
-												<option value="Bemetara">Bemetara</option>
-												<option value="Korba">Korba</option>
-											</select>
-										</div>
-
-										<div class="col-lg-12 form-group mt-3">
-											<label for="" class="form-label">Departure<span
-													class="text-danger">*</span></label>
-											<input class="form-control" type="date" name="departure_date"
-												id="datetimepicker1" required>
-
-										</div>
-
-										<div class="col-lg-12 form-group mt3">
-											<label for="" class="form-label">Return<span
-													class="text-danger">*</span></label>
-											<input class="form-control" type="date" name="return_date"
-												id="datetimepicker1" required>
-										</div>
-
-										<button class="btn btn-success text-center" name="submit"
-											id="submit">SUBMIT</button>
-
-
-									</div>
-								</form>
+							
 
 								<!-- second form -->
-								<form action="" method="POST" id="Outstation-Oneway" class="tabcontent">
+								<form action="" method="POST" id="Outstation-Oneway" class="tabcontent form-body p-5" style="color:white"">
 									<div class="row">
-										<div class="col-lg-12 form-group ">
-											<input type="hidden" name="form_name" id="form_name"
-												value="Outstation-Oneway">
-											<label for="" class="form-label">From<span
-													class="text-danger">*</span></label>
-											<select class="form-control" name="from_place" id="from_place">
+										<div class="col-lg-6 form-group mb-5">
+											<label for="" class="form-label">Your Name<span class="text-danger">*</span></label>
+											<input type="text" name="Name" placeholder="Enter Your Name" id="Name"class="form-control border-warning ">
+										</div>
+										
+										<div class="col-lg-6 form-group">
+											<label for="" class="form-label">Your Mobile<span class="text-danger">*</span></label>
+											<input type="text" name="Mobile" placeholder="Enter Your Mobile Number" id="Mobile" class="form-control border-warning">
+										</div>
+										<div class="col-lg-6 form-group mb-5">
+											<label for="" class="form-label">From<span class="text-danger">*</span></label>
+											<select class=" form-control border-warning" name="from_place" id="from_place">
 												<option value="">- - Select City - -</option>
 												<option value="Raipur">Raipur</option>
 												<option value="Bilaspur">Bilaspur</option>
@@ -346,11 +261,10 @@
 												<option value="Korba">Korba</option>
 											</select>
 										</div>
-
-										<div class="col-lg-12 form-group  mt-3">
-											<label for="" class="form-label">To<span
-													class="text-danger">*</span></label>
-											<select class="form-control" name="to_place" id="" name="to_place" required>
+									
+										<div class="col-lg-6 form-group">
+											<label for="" class="form-label">To<span class="text-danger">*</span></label>
+											<select class=" form-control border-warning" name="to_place" id="to_place" required>
 												<option value="">- - Select City - -</option>
 												<option value="Raipur">Raipur</option>
 												<option value="Bilaspur">Bilaspur</option>
@@ -377,29 +291,130 @@
 												<option value="Korba">Korba</option>
 											</select>
 										</div>
-
-										<div class="col-lg-12 form-group mt-3">
-											<label for="" class="form-label">Departure<span
-													class="text-danger">*</span></label>
-											<input class="form-control" type="date" name="departure_date"
-												id="departure_date" required>
-
+									
+										<div class="col-lg-6 form-group mb-5">
+											<label for="" class="form-label">Departure<span class="text-danger">*</span></label>
+											<input class="form-control border-warning" type="date" name="departure_date" id="datetimepicker1" required>
+									
 										</div>
-
-										<button class="btn btn-success" name="submit">SUBMIT</button>
-
-
+									
+										<div class="col-lg-6 form-group">
+											<label for="" class="form-label">Return<span class="text-danger">*</span></label>
+											<input class="form-control border-warning" type="date" name="return_date" id="datetimepicker1" required>
+										</div>
+									
+										<div class="col-lg-12 form-group mb-5 text-justify">
+											<button class="btn btn-danger form-control text-center" name="submit" id="submit">SUBMIT</button>
+										</div>
 									</div>
 								</form>
+
+								<!-- Second -->
+								<form action="" method="POST" id="Outstation-RoundTrip" class="tabcontent form-body p-5" style="display: block;color:white">
+									<input type="hidden" name="form_name" id="form_name" value="Outstation-RoundTrip" class="form-control ">
+									<div class="row">
+									<div class="col-lg-6 form-group mb-5">
+										<label for="" class="form-label">Your Name<span class="text-danger">*</span></label>
+										<input type="text" name="Name"  placeholder="Enter Your Name" id="Name"class="form-control border-warning ">
+									</div>
+									
+									<div class="col-lg-6 form-group">
+										<label for="" class="form-label">Your Mobile<span class="text-danger">*</span></label>
+										<input type="text" name="Mobile" placeholder="Enter Your Mobile Number" id="Mobile" class="form-control border-warning">
+									</div>
+									<div class="col-lg-6 form-group mb-5">
+										<label for="" class="form-label">From<span class="text-danger">*</span></label>
+										<select class=" form-control border-warning" name="from_place" id="from_place">
+											<option value="">- - Select City - -</option>
+											<option value="Raipur">Raipur</option>
+											<option value="Bilaspur">Bilaspur</option>
+											<option value="Durg">Durg</option>
+											<option value="Bhilai">Bhilai</option>
+											<option value="Ambikapur">Ambikapur</option>
+											<option value="Raigarh">Raigarh</option>
+											<option value="Kabirdham">Kabirdham</option>
+											<option value="Mungeli">Mungeli</option>
+											<option value="Janjgir">Janjgir</option>
+											<option value="Champa">Champa</option>
+											<option value="Arang">Arang</option>
+											<option value="Dhamtari">Dhamtari</option>
+											<option value="Kanker">Kanker</option>
+											<option value="Dantewada">Dantewada</option>
+											<option value="Sukma">Sukma</option>
+											<option value="Saraipali">Saraipali</option>
+											<option value="Saranggarh">Saranggarh</option>
+											<option value="Rajnandgao">Rajnandgao</option>
+											<option value="Dongargarh">Dongargarh</option>
+											<option value="Basana">Basana</option>
+											<option value="Balod">Balod</option>
+											<option value="Bemetara">Bemetara</option>
+											<option value="Korba">Korba</option>
+										</select>
+									</div>
+								
+									<div class="col-lg-6 form-group">
+										<label for="" class="form-label">To<span class="text-danger">*</span></label>
+										<select class=" form-control border-warning" name="to_place" id="to_place" required>
+											<option value="">- - Select City - -</option>
+											<option value="Raipur">Raipur</option>
+											<option value="Bilaspur">Bilaspur</option>
+											<option value="Durg">Durg</option>
+											<option value="Bhilai">Bhilai</option>
+											<option value="Ambikapur">Ambikapur</option>
+											<option value="Raigarh">Raigarh</option>
+											<option value="Kabirdham">Kabirdham</option>
+											<option value="Mungeli">Mungeli</option>
+											<option value="Janjgir">Janjgir</option>
+											<option value="Champa">Champa</option>
+											<option value="Arang">Arang</option>
+											<option value="Dhamtari">Dhamtari</option>
+											<option value="Kanker">Kanker</option>
+											<option value="Dantewada">Dantewada</option>
+											<option value="Sukma">Sukma</option>
+											<option value="Saraipali">Saraipali</option>
+											<option value="Saranggarh">Saranggarh</option>
+											<option value="Rajnandgao">Rajnandgao</option>
+											<option value="Dongargarh">Dongargarh</option>
+											<option value="Basana">Basana</option>
+											<option value="Balod">Balod</option>
+											<option value="Bemetara">Bemetara</option>
+											<option value="Korba">Korba</option>
+										</select>
+									</div>
+								
+									<div class="col-lg-6 form-group mb-5">
+										<label for="" class="form-label">Departure<span class="text-danger">*</span></label>
+										<input class="form-control border-warning" type="date" name="departure_date" id="datetimepicker1" required>
+								
+									</div>
+								
+									<div class="col-lg-6 form-group">
+										<label for="" class="form-label">Return<span class="text-danger">*</span></label>
+										<input class="form-control border-warning" type="date" name="return_date" id="datetimepicker1" required>
+									</div>
+								
+									<div class="col-lg-12 form-group mb-5">
+										<button class="btn btn-info form-control text-center" name="submit" id="submit">SUBMIT</button>
+									</div>
+								</div>
+								</form>
+	
 
 								<!-- Third form -->
-								<form action="" method="POST" id="Local-FullDay" class="tabcontent">
+								<form action="" method="POST" id="Local-FullDay" class="tabcontent form-body p-5" style="color:white"">
 									<div class="row">
-										<div class="col-lg-12 ">
-											<input type="hidden" name="form_name" id="form_name" value="Local-FullDay">
-											<label for="" class="form-label">From<span
-													class="text-danger">*</span></label>
-											<select class="form-control" name="from_place" id="from_place">
+										<div class="col-lg-6 form-group mb-5">
+											<label for="" class="form-label">Your Name<span class="text-danger">*</span></label>
+											<input type="text" name="Name"  placeholder="Enter Your Name" id="Name"class="form-control border-warning ">
+										</div>
+										
+										<div class="col-lg-6 form-group">
+											<label for="" class="form-label">Your Mobile<span class="text-danger">*</span></label>
+											<input type="text" name="Mobile" placeholder="Enter Your Mobile Number" id="Mobile" class="form-control border-warning">
+										</div>
+										<div class="col-lg-6 form-group mb-5">
+											<label for="" class="form-label">From<span class="text-danger">*</span></label>
+											<select class=" form-control border-warning" name="from_place" id="from_place">
 												<option value="">- - Select City - -</option>
 												<option value="Raipur">Raipur</option>
 												<option value="Bilaspur">Bilaspur</option>
@@ -426,11 +441,10 @@
 												<option value="Korba">Korba</option>
 											</select>
 										</div>
-
-										<div class="col-lg-12 form-group" style="margin-top:6px;">
-											<label for="" class="form-label">To<span
-													class="text-danger">*</span></label>
-											<select class="form-control" name="to_place" id="to_place" required>
+									
+										<div class="col-lg-6 form-group">
+											<label for="" class="form-label">To<span class="text-danger">*</span></label>
+											<select class=" form-control border-warning" name="to_place" id="to_place" required>
 												<option value="">- - Select City - -</option>
 												<option value="Raipur">Raipur</option>
 												<option value="Bilaspur">Bilaspur</option>
@@ -457,22 +471,24 @@
 												<option value="Korba">Korba</option>
 											</select>
 										</div>
-
-										<div class="col-lg-12 form-group mt-3">
-											<label for="" class="form-label">Departure<span
-													class="text-danger">*</span></label>
-											<input type="date" name="departure_date" id="departure_date"
-												class="form-control" required>
-
+									
+										<div class="col-lg-6 form-group mb-5">
+											<label for="" class="form-label">Departure<span class="text-danger">*</span></label>
+											<input class="form-control border-warning" type="date" name="departure_date" id="datetimepicker1" required>
+									
 										</div>
-
-										<button class="btn btn-success text-center" name="submit">SUBMIT</button>
-
-
+									
+										<div class="col-lg-6 form-group">
+											<label for="" class="form-label">Return<span class="text-danger">*</span></label>
+											<input class="form-control border-warning" type="date" name="return_date" id="datetimepicker1" required>
+										</div>
+									
+										<div class="col-lg-12 form-group mb-5 text-justify">
+											<button class="btn btn-primary form-control text-center" title="Book Full Day Local" name="submit" id="submit">Contact</button>
+										</div>
 									</div>
 								</form>
-							</div>
-						</div>
+							<!-- </div> -->
 					</div>
 				</div>
 			</div>
