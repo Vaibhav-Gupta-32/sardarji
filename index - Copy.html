@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from www.Sardar Jitourandtravels.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jul 2024 16:13:58 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<link rel="canonical" href="https://Sardar Jitourandtravels.com/" />
+	<meta name="google-site-verification" content="ksa8s6G7BI0E37wp4DQuHhrMvw8mPLTsjdWBmVk2Q4s" />
+	<title>Sardar Ji One Way Taxi Service - Chhattisgarh Cab Booking</title>
+	<meta name="description"
+		content="Sardar Ji Cab Service offers taxi services in Chhattisgarh- Book full day taxi in Chhattisgarh and other taxi service like Airport transfer, Railway transfer in Chhattisgarh with top car operators. Make your journey safe and hassle free with Sardar Ji Cab Service">
+	<meta name="keywords"
+		content="Sardar Ji Cab Service,Sardar Ji Cab Service Taxi Service,taxi in Chhattisgarh, cabs in Chhattisgarh,cab in Chhattisgarh,car rental in Chhattisgarh,car rental services in Chhattisgarh,Chhattisgarhcab booking,Chhattisgarh Car Car Rental, Tour and travels,taxi service in Chhattisgarh,cab service in Chhattisgarh,airport taxi in Chhattisgarh,cab for airport in Chhattisgarh,airport pickup taxi in Chhattisgarh, airport drop taxi in Chhattisgarh,outstation cabs in Chhattisgarh,local taxi in Chhattisgarh,local cab in Chhattisgarh" />
+	<meta http-equiv="Content-Language" content="EN" />
+	<meta name="document-distribution" content="Global" />
+	<meta name="Author" content="Vikas Kumar" />
+	<meta name="Copyright" content="Sardar Jitourandtravels.com" />
+	<meta name="robots" content="all,index,follow" />
+	<meta name="revisit-after" content="2 days" />
+	<meta name="YahooSeeker" content="index, follow" />
+	<meta name="msnbot" content="index, follow " />
+	<meta name="googlebot" content="index, follow " />
+	<meta name="allow-search" content="yes" />
+	<meta name="Rating" content="General" />
+	<meta name="Generator" content="EditPlus" />
+	<meta name="reply-to" content="booking@Sardar " />
+	<meta name="document-classification" content="Tour &amp; Travel Taxi Service" />
+	<meta name="document-type" content="Public" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/icomoon-icon/style.css">
+	<link rel="stylesheet" href="vendors/themify-icon/themify-icons.css">
+	<link rel="icon" href="img/favicon.png" />
+	<!-- Extra Plugin CSS -->
+	<link rel="stylesheet" href="vendors/datetimepicker/tempusdominus-bootstrap-4.min.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendors/slick/slick.css">
+	<link rel="stylesheet" href="vendors/slick/slick-theme.css">
+	<link rel="stylesheet" href="vendors/animation/animate.css">
+	<link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+	<link rel="stylesheet" href="vendors/animate-css/animate.css">
+
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style1.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
+
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="css/listing888e888e.css?v3.46" rel="stylesheet" type="text/css">
+	<script src="ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="things/jquery.geocomplete.html"></script>
+	<!--slider---->
+
+	<script src="code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	<script>
+		$(function () {
+
+			$("#tripid").change(function () {
+				console.log($(this).val())
+
+				if ($(this).val() == 2) {
+					$('#roundid').hide();
+					$('#roundid1').show();
+					$('#showdate').hide();
+					$('#Show_id').hide();
+					$('#Show_id1').show();
+
+				}
+				else if ($(this).val() == 3) {
+					$('#roundid1').hide();
+					$('#roundid').show();
+					$('#showdate').hide();
+					$('#Show_id').show();
+					$('#Show_id1').hide();
+
+				}
+
+				else if ($(this).val() == 4) {
+					$('#roundid1').hide();
+					$('#roundid').show();
+					$('#showdate').hide();
+					$('#Show_id').show();
+					$('#Show_id1').hide();
+				}
+				else {
+					$('#roundid1').hide();
+					$('#roundid').show();
+					$('#showdate').show();
+					$('#Show_id').show();
+					$('#Show_id1').hide();
+				}
+
+
+				if ($(this).attr('id') == 'tripid')
+					Reqtype = 1;
+				else
+					Reqtype = 2;
+
+
+				var CurDom = $(this).closest('.form-group').find(".alert");
+				var errDom = $(this).closest('.form-group');
+				errDom.find('.CusMsgOk').remove();
+				errDom.find('.CusMsg').remove();
+
+				if (CurDom.length == 0) {
+					$.ajax({
+						url: "check.php",
+						data: { tripid: $(this).val(), fromadd: $(this).val(), type: Reqtype },
+						type: 'POST',
+						error: function () {
+							$('#info').html('<p>An error has occurred</p>');
+						},
+						dataType: 'html',
+						success: function (data) {
+							if (data) {
+
+								/*errDom.append('<div class="CusMsgOk text-success">Available</div>');*/
+								document.getElementById("fromadd").innerHTML = data;
+
+							}
+							else {
+								errDom.append('<div class="CusMsg text-danger">Not Available!</div>');
+
+							}
+						}
+					});
+				}
+
+			})
+
+
+
+
+
+
+			$("#fromadd").change(function () {
+				console.log($(this).val())
+
+
+
+
+				if ($(this).attr('id') == 'tripid')
+					Reqtype = 1;
+				else
+					Reqtype = 2;
+
+
+				var CurDom = $(this).closest('.form-group').find(".alert");
+				var errDom = $(this).closest('.form-group');
+				errDom.find('.CusMsgOk').remove();
+				errDom.find('.CusMsg').remove();
+
+				if (CurDom.length == 0) {
+					$.ajax({
+						url: "check.php",
+						data: { tripid: $(this).val(), fromadd: $(this).val(), type: Reqtype },
+						type: 'POST',
+						error: function () {
+							$('#info').html('<p>An error has occurred</p>');
+						},
+						dataType: 'html',
+						success: function (data) {
+							if (data) {
+
+								/*errDom.append('<div class="CusMsgOk text-success">Available</div>');*/
+								document.getElementById("fromadd").innerHTML = data;
+
+							}
+							else {
+								errDom.append('<div class="CusMsg text-danger">Not Available!</div>');
+
+							}
+						}
+					});
+				}
+
+			})
+
+
+
+
+
+
+			$('#tripid').val('-1').trigger('change');
+		})
+
+
+		$(function () {
+
+			$("#skills").autocomplete({
+				source: function (request, response) {
+					$.ajax({
+						url: "search.php",
+						dataType: "json",
+						data: {
+							term: request.term,
+							City_id: $('#fromadd').val()
+						},
+						success: function (data) {
+							response(data);
+						}
+					});
+				}
+			});
+
+		});
+	</script>
+</head>
+
+<body data-scroll-animation="true">
+
+
+
+	<!--================Header Area =================-->
+	<header class="header_area menu_eight">
+		<div class="main_menu">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<a class="navbar-brand" href="#"><img src="img/sardarjilogo.png" srcset="img/sardarjilogo.png"
+							alt="Sardar Ji Tour and Travels Taxi Service"></a>
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Gallery</a></li>
+
+							<li><a href="#">Contact</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="booking_btn">
+								<i class="icon-phone_2"></i>
+								<p>Call For Booking</p>
+								<a href="tel:918319790050">8319790050</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header> <!--================End Footer Area =================-->
+
+	<section class="main_slider_area">
+		<div class="main_slider taxi_slider slick-initialized slick-slider">
+			<div class="slick-list">
+				<div class="slick-track" style="opacity: 1; width: 3072px;">
+					<div class="slider_item slick-slide slick-current slick-active" data-slick-index="0"
+						aria-hidden="false"
+						style="width: 1536px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
+						tabindex="0">
+						<div class="image_overlay"
+							style="background: url(img/home-slider/taxi-slider-1.jpg) no-repeat;"></div>
+					</div>
+					<div class="slider_item slick-slide" data-slick-index="1" aria-hidden="true"
+						style="width: 1536px; position: relative; left: -1536px; top: 0px; z-index: 998; opacity: 0;"
+						tabindex="-1">
+						<div class="image_overlay"
+							style="background: url(img/home-slider/taxi-slider-2.jpg) no-repeat;"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="taxi_slider_text">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 d-flex">
+						<div class="left_text">
+							<h3 class="wow  fadeInUp animated" data-wow-delay="0.2s"
+								style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Lets Book
+								<span>Your Taxi</span> <br>Instantly</h3>
+							<p class="wow  fadeInUp animated" data-wow-delay="0.4s"
+								style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Global
+								airport transfers, taxis and cars services</p>
+							<a class="main_btn yellow wow  fadeInLeft animated" data-wow-delay="0.6s" href="#"
+								style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">Discover
+								More</a>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<div class="taxi_s_form">
+							<div class="slider_form_title">
+								<h2>Book your <span>Taxi</span></h2>
+
+								<form class="" action="checkout.php">
+
+									<div class="col-sm-12 same">
+										<h3
+											style="text-align: center; margin: 0; line-height: 45px; position: relative;">
+										</h3>
+
+
+										<!--<select class="colordef" onchange="goUp()" id="tripid" name="tripid">--!>
+<select class="colordef" name="tripid"  id="tripid" >
+<option value="-1">- - Select Trip - -</option>
+
+<option value='1'>Outstation-RoundTrip</option>
+<option value='2'>Outstation-Oneway</option>
+<option value='4'>Local-FullDay</option>
+</select>
+</div>
+
+<div id="Show_id" class="col-sm-6 same"><h4 >From</h4>
+<div class="form-group">
+<label for="usr" style="padding: 33px 0 0 0;"></label>
+<select class="colordef" name="fromadd">
+<option value="-1">- - Select City - -</option>
+<option value="1">Raipur</option>
+<option value="2">Bilaspur</option>
+<option value="3">Durg</option>
+<option value="4">Bhilai</option>
+<option value="5">Ambikapur</option>
+<option value="6">Raigarh</option>
+<option value="7">Kabirdham</option>
+<option value="8">Mungeli</option>
+<option value="9">Janjgir</option>
+<option value="10">Champa</option>
+<option value="11">Arang</option>
+<option value="12">Dhamtari</option>
+<option value="13">Kanker</option>
+<option value="14">Dantewada</option>
+<option value="15">Sukma</option>
+<option value="16">Saraipali</option>
+<option value="17">Saranggarh</option>
+<option value="18">Rajnandgao</option>
+<option value="19">Dongargarh</option>
+<option value="20">basana</option>
+<option value="21">balod</option>
+<option value="22">bemetara</option>
+<option value="23">korba</option>
+</select>
+</div>
+</div>
+<div id="Show_id1" class="col-sm-6 same"><h4 >From</h4>
+<div class="form-group">
+<label for="usr" style="padding: 33px 0 0 0;"></label>
+<select class="colordef" name="fromadd1">
+<option value="-1">- - Select City - -</option>
+<option value="1">Raipur</option>
+<option value="2">Bilaspur</option>
+<option value="3">Durg</option>
+<option value="4">Bhilai</option>
+<option value="5">Ambikapur</option>
+<option value="6">Raigarh</option>
+<option value="7">Kabirdham</option>
+<option value="8">Mungeli</option>
+<option value="9">Janjgir</option>
+<option value="10">Champa</option>
+<option value="11">Arang</option>
+<option value="12">Dhamtari</option>
+<option value="13">Kanker</option>
+<option value="14">Dantewada</option>
+<option value="15">Sukma</option>
+<option value="16">Saraipali</option>
+<option value="17">Saranggarh</option>
+<option value="18">Rajnandgao</option>
+<option value="19">Dongargarh</option>
+<option value="20">basana</option>
+<option value="21">balod</option>
+<option value="22">bemetara</option>
+<option value="23">korba</option>
+</select>
+</div>
+</div>
+
+<div id="roundid" class="col-sm-6 same"><h4>To</h4>
+<div class="form-group">
+<label for="usr"></label>
+
+<input type="text"  class="form-control" name="toadd1" id="skills">
+
+</div>
+</div>
+
+<div id="roundid1" class="col-sm-6 same"><h4>To</h4>
+<div class="form-group">
+<label for="usr"style="padding: 33px 0 0 0;"></label>
+<select class="colordef"     name="toadd">
+<option value="-1"> - - Select City - -</option>
+<option value="1">Raipur</option>
+<option value="2">Bilaspur</option>
+<option value="3">Durg</option>
+<option value="4">Bhilai</option>
+<option value="5">Ambikapur</option>
+<option value="6">Raigarh</option>
+<option value="7">Kabirdham</option>
+<option value="8">Mungeli</option>
+<option value="9">Janjgir</option>
+<option value="10">Champa</option>
+<option value="11">Arang</option>
+<option value="12">Dhamtari</option>
+<option value="13">Kanker</option>
+<option value="14">Dantewada</option>
+<option value="15">Sukma</option>
+<option value="16">Saraipali</option>
+<option value="17">Saranggarh</option>
+<option value="18">Rajnandgao</option>
+<option value="19">Dongargarh</option>
+<option value="20">basana</option>
+<option value="21">balod</option>
+<option value="22">bemetara</option>
+<option value="23">korba</option>
+</select>
+</div>
+</div>
+<div class="col-lg-12 same">
+<div class="col-lg-6 same"><h4>Departure </h4>
+<div class="form-group">
+<label for="usr"></label>
+<input type="text" class="form-control" id="from" name="date1" placeholder="DD/MM/YYYY">
+</div>
+</div>
+
+<div id="showdate" class="col-lg-6 same"><h4>Return  </h4>
+<div class="form-group">
+<label for="usr"></label>
+<input type="text" class="form-control" id="to"  name="date2" placeholder="DD/MM/YYYY">
+</div>
+</div>
+
+
+
+
+
+<div class="col-sm-6 same"></div>
+<div class="col-sm-6 same">
+<div class="bt1" style="padding:1%;"><input type="submit"  type="button" class="btn btn-success btn-lg" onclick="return formchk()"  value="SUBMIT"/></div>
+                </div>
+               
+      
+      
+      
+          
+        </div>
+         
+         
+         
+        
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         <div class="map_canvas hidef" ></div>
+        <div class="row">
+                
+            </div>
+        </form>
+       
+
+ <table  border="0" cellpadding="0" cellspacing="3">
+
+<tr>
+    <td colspan="2">
+        <div style="color: #fff;" id="dvDistance">
+        </div>
+    </td>
+</tr>
+</table>
+
+
+        
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+            		</div>
+            	</div>
+            </div></div>
+            			</div>
+        </section>
+        
+       
+        
+       
+          <!--================Choose Area =================-->
+
+										<section class="car_drive_area dotted_left p_100">
+											<div class="container">
+												<div class="flag_center_title wow  fadeInUp animated"
+													data-wow-delay="0.2s"
+													style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+													<h2>Sardar Ji <span class="red"> One Way Taxi Services</span></h2>
+													<p>Sardar JI One Way Taxi Services offers taxi services in
+														Chhattisgarh- Book full day taxi in Chhattisgarh and other taxi
+														service like Airport transfer, Railway transfer in
+														Chhattisgarhwith top car operators. Make your journey safe and
+														hassle free with Sardar JI One Way Taxi Services</p>
+													<p> If you want to explore the Chhattisgarh, look no further. Avail
+														of Sardar JI One Way Taxi Services top-rated and affordable cabs
+														in Chhattisgarh.</p>
+												</div>
+
+												<div class="row l_collection_inner">
+													<div class="col-lg-3 col-md-4 col-sm-6">
+														<div class="l_collection_item orange grid_four wow  fadeInUp animated"
+															data-wow-delay="0.2s"
+															style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+															<div class="car_img">
+																<a href="contact.html"><img class="img-fluid"
+																		src="img/swfit.jpg"
+																		alt="Sardar JI One Way Taxi Services"></a>
+															</div>
+															<div class="text_body">
+																<a href="contact.html">
+																	<h4>SWIFT DZIRE</h4>
+																</a>
+
+																<p>SEATING: 4 PASSENGERS</p>
+															</div>
+
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-4 col-sm-6">
+														<div class="l_collection_item orange grid_four wow  fadeInUp animated"
+															data-wow-delay="0.4s"
+															style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+															<div class="car_img">
+																<a href="product-details.html"><img class="img-fluid"
+																		src="img/Toyota-Etios.jpg"
+																		alt="Sardar Ji Cab Service Taxi"></a>
+															</div>
+															<div class="text_body">
+																<a href="product-details.html">
+																	<h4>Etios</h4>
+																</a>
+
+																<p>SEATING: 4 PASSENGERS</span></p>
+															</div>
+
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-4 col-sm-6">
+														<div class="l_collection_item orange grid_four wow  fadeInUp animated"
+															data-wow-delay="0.6s"
+															style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+															<div class="car_img">
+																<a href="product-details.html"><img class="img-fluid"
+																		src="img/innova1.jpg"
+																		alt="Sardar Ji Cab Service Taxi"></a>
+															</div>
+															<div class="text_body">
+																<a href="product-details.html">
+																	<h4>Innova</h4>
+																</a>
+
+																<p>SEATING: 6+1 PASSENGERS</p>
+															</div>
+
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-4 col-sm-6">
+														<div class="l_collection_item orange grid_four wow  fadeInUp animated"
+															data-wow-delay="0.8s"
+															style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+															<div class="car_img">
+																<a href="product-details.html"><img class="img-fluid"
+																		src="img/innova2.jpg"
+																		alt="Sardar Ji Cab Service Taxi"></a>
+															</div>
+															<div class="text_body">
+																<a href="product-details.html">
+																	<h4>Innova Crysta</h4>
+																</a>
+
+																<p>SEATING: 7+1 PASSENGERS</p>
+															</div>
+
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-4 col-sm-6">
+														<div class="l_collection_item orange grid_four wow  fadeInUp animated"
+															data-wow-delay="1s"
+															style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+															<div class="car_img">
+																<a href="product-details.html"><img class="img-fluid"
+																		src="img/innova2.jpg"
+																		alt="Sardar Ji Cab Service Taxi"></a>
+															</div>
+															<div class="text_body">
+																<a href="product-details.html">
+																	<h4>Ertiga</h4>
+																</a>
+
+																<p>SEATING: 4 PASSENGERS</p>
+															</div>
+
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-4 col-sm-6">
+														<div class="l_collection_item orange grid_four wow  fadeInUp animated"
+															data-wow-delay="1.2s"
+															style="visibility: visible; animation-delay: 1.2s; animation-name: fadeInUp;">
+															<div class="car_img">
+																<a href="product-details.html"><img class="img-fluid"
+																		src="img/xylo.jpg"
+																		alt="Sardar Ji Cab Service Taxi"></a>
+															</div>
+															<div class="text_body">
+																<a href="product-details.html">
+																	<h4>Xylo</h4>
+																</a>
+
+																<p>SEATING: 7+1 PASSENGERS</span></p>
+															</div>
+
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-4 col-sm-6">
+														<div class="l_collection_item orange grid_four wow  fadeInUp animated"
+															data-wow-delay="1.3s"
+															style="visibility: visible; animation-delay: 1.3s; animation-name: fadeInUp;">
+															<div class="car_img">
+																<a href="product-details.html"><img class="img-fluid"
+																		src="img/Tempo-Traveller.jpg"
+																		alt="Sardar Ji Cab Service Taxi"></a>
+															</div>
+															<div class="text_body">
+																<a href="product-details.html">
+																	<h4>Tempo Traveller</h4>
+																</a>
+
+																<p>SEATING: 12+1 PASSENGERS</p>
+															</div>
+
+														</div>
+													</div>
+													<div class="col-lg-3 col-md-4 col-sm-6">
+														<div class="l_collection_item orange grid_four wow  fadeInUp animated"
+															data-wow-delay="1.4s"
+															style="visibility: visible; animation-delay: 1.4s; animation-name: fadeInUp;">
+															<div class="car_img">
+																<a href="product-details.html"><img class="img-fluid"
+																		src="img/honda-city.jpg"
+																		alt="Sardar Ji Cab Service Taxi"></a>
+															</div>
+															<div class="text_body">
+																<a href="product-details.html">
+																	<h4>Honda-city</h4>
+																</a>
+
+																<p>SEATING: 12+1 PASSENGERS</p>
+															</div>
+
+														</div>
+													</div>
+												</div>
+												<div class="all_btn wow  fadeInUp animated" data-wow-delay="0.2s"
+													style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+													<a class="main_btn orange" href="contact.html">Any type Cab Book
+														Now</a>
+												</div>
+											</div>
+										</section>
+
+
+
+										<!--================Trusted Taxi Area =================-->
+										<section class="budget_feaute_area taxi_object">
+											<div class="container">
+												<div class="row trusted_taxi_inner">
+													<div class="col-lg-6">
+														<div class="trusted_text">
+															<h4>The Most <span> Trusted Taxi</span> Services in
+																Chhattisgarh</h4>
+															<p> If you want to explore the Chhattisgarh, look no
+																further. Avail of Sardar JI One Way Taxi Services
+																top-rated and affordable cabs in Chhattisgarh.</p>
+															<a class="main_btn yellow" href="contact.html">Book Taxi</a>
+														</div>
+													</div>
+													<div class="col-lg-6">
+														<div class="trusted_img wow animated fadeInLeft"
+															data-wow-delay="0.4s"><img src="img/trusted-taxi.png"
+																alt=""></div>
+													</div>
+												</div>
+											</div>
+										</section>
+										<!--================End Trusted Taxi Area =================-->
+
+
+										<!--================Car Bueget Area =================-->
+										<section class="car_about_area p_100 wow  fadeInUp animated"
+											data-wow-delay="0.2s"
+											style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+											<div class="container">
+												<div class="row car_about_inner">
+													<div class="col-lg-6">
+														<div class="c_ab_text">
+															<h6>About us</h6>
+															<h3>Welcome to Sardar Ji <span class="red">One Way Taxi
+																	Service</span></h3>
+															<p>Sardar JI One Way Taxi Services offers taxi services in
+																Chhattisgarh- Book full day taxi in Chhattisgarh and
+																other taxi service like Airport transfer, Railway
+																transfer in Chhattisgarhwith top car operators. Make
+																your journey safe and hassle free with Sardar JI One Way
+																Taxi Services</p>
+															<p> If you want to explore the Chhattisgarh, look no
+																further. Avail of Sardar JI One Way Taxi Services
+																top-rated and affordable cabs in Chhattisgarh.</p>
+
+														</div>
+
+													</div>
+													<div class="col-lg-6">
+														<img class="img-fluid" src="img/srji.jpg"
+															alt="Sardar Ji Cab Service">
+													</div>
+												</div>
+
+												<p>Sardar JI One Way Taxi Services is an online cab booking aggregator
+													with over 10 years of expertise in local and intercity car rentals.
+													Providing reliable and premium services in over 20 cities, Sardar Ji
+													Cab Service is the largest chauffeur-driven car rental company in
+													terms of geographical reach in India . Our expert drivers will guide
+													you through some of Chhattisgarh's best experiences. Hire a car in
+													Chhattisgarhwith us to make your holidays truly memorable.</p>
+											</div>
+									</div>
+	</section>
+	<!--================End Car Bueget Area =================-->
+
+
+
+
+	<!--================Footer Area =================-->
+
+	<!--End of Tawk.to Script-->
+	<footer class="footer_area yellow_footer">
+		<div class="footer_widgets">
+			<div class="container">
+				<div class="row f_widgets_inner">
+					<div class="col-lg-3 col-sm-6">
+						<aside class="f_widget about_widget wow animated fadeInUp" data-wow-delay="0.2s">
+							<a class="f_logo" href="index-3.html"><img src="img/sardarjilogo.png"
+									srcset="img/sardarjilogo.png" alt="Sardar Ji Tour and travels Taxi Service"></a>
+							<p>
+								<i class="icon-map_marker_2" aria-hidden="true"></i>Dharampura no. 2 jagdalpur <br>
+								Deopuri Front of Kamal vihar Raipur
+							</p>
+							<a href="mailto:booking@Sardar Jitourandtravels.com">
+								<i class="icon-envelop_2" aria-hidden="true"></i>sardarjionewaytaxi@gmail.com</a>
+							<a href="tel:+918319790050">
+								<i class="icon-phone_2" aria-hidden="true"></i>+91-8319790050</a>
+						</aside>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<aside class="f_widget link_widget wow animated fadeInUp" data-wow-delay="0.4s">
+							<div class="f_title">
+								<h3>Quick Link</h3>
+							</div>
+							<ul class="nav flex-column">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Services</a></li>
+								<li><a href="#">Gallery</a></li>
+								<li><a href="#">Contact us</a></li>
+
+							</ul>
+						</aside>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<aside class="f_widget link_widget wow animated fadeInUp" data-wow-delay="0.6s">
+							<div class="f_title">
+								<h3> Taxi Service</h3>
+							</div>
+							<ul class="nav flex-column">
+								<ul class="nav flex-column">
+									<li><a href="#"> Outstation-RoundTrip</a></li>
+									<li><a href="#">Outstation-Oneway</a></li>
+									<li><a href="#">Local-FullDay</a></li>
+
+
+								</ul>
+						</aside>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<aside class="f_widget link_widget wow animated fadeInUp" data-wow-delay="0.6s">
+							<div class="f_title">
+								<h3>Taxi Service In Chhattisgarh</h3>
+							</div>
+							<ul class="nav flex-column">
+								<li><a href="#"> Raipur</a></li>
+								<li><a href="#">Bilaspur</a></li>
+								<li><a href="#">Jagdalpur</a></li>
+								<li><a href="#">Raigarh & More Cities</a></li>
+							</ul>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer_copyright">
+			<div class="container">
+				<div class="copyright_inner d-flex justify-content-between">
+					<div class="left">
+						<p>Copyright @ 2024 Sardar JI One Way Taxi Services All Rights Reserved. |
+						</p>
+					</div>
+					<div class="right">
+						<ul class="nav">
+							<li>Designed By<a href="https://cbktechnologies.com" target="_blank"> CBK Technologies Pvt
+									Ltd </a></li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================End Footer Area =================-->
+
+
+
+	<!--================End Search Box Area =================-->
+
+	<div class="row"
+		style=" position: fixed; bottom: 0px; width: 100%;z-index:999999; left: 0px; margin: 50px 0 0 0px;">
+
+		<div class="col-xs-6" style="background:blue;">
+			<a href="tel:918319790050" target="_blank" class="btn-sonar"
+				style=" background:blue; height: 52px; padding-top: 5px; color: #fff; width: 100%;">
+				<img src="img/call-icon.png"> Call Now
+			</a>
+		</div>
+		<div class="col-xs-6 pull-right" style="background:#4ac759;">
+
+			<a href="https://api.whatsapp.com/send?phone=918319790050&amp;text" class="btn-sonar"
+				style="height: 52px; padding-top: 5px; width: 100%;" target="_blank">
+				<img src="img/whatsapp-icon.png"> Whatsapp
+			</a>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		$(function () {
+			$('#datetimepicker1').datetimepicker();
+		});
+	</script>
+
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5JPTS7" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="resources/demos/style.html">
+
+	<script>
+		$(function () {
+			var dateFormat = "mm/dd/yy",
+				from = $("#from")
+					.datepicker({
+						defaultDate: "+1",
+						changeMonth: true,
+						numberOfMonths: 1
+					})
+					.on("change", function () {
+						to.datepicker("option", "minDate", getDate(this));
+					}),
+				to = $("#to").datepicker({
+					defaultDate: "+1",
+					changeMonth: true,
+					numberOfMonths: 1
+				})
+					.on("change", function () {
+						from.datepicker("option", "maxDate", getDate(this));
+					});
+
+			function getDate(element) {
+				var date;
+				try {
+					date = $.datepicker.parseDate(dateFormat, element.value);
+				} catch (error) {
+					date = null;
+				}
+
+				return date;
+			}
+		});
+	</script>
+
+	<!-- Optional JavaScript -->
+
+	<script src="js/popper.min.js"></script>
+	<!-- Extra Plugin js -->
+	<script src="vendors/datetimepicker/moment.js"></script>
+	<script src="vendors/datetimepicker/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope.pkgd.min.js"></script>
+	<script src="vendors/slick/slick.min.js"></script>
+	<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+	<script src="vendors/animate-css/wow.min.js"></script>
+
+	<script src="js/theme-dist.js"></script>
+
+
+
+</body>
+
+
+<!-- Mirrored from www.Sardar Jitourandtravels.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jul 2024 16:14:49 GMT -->
+
+</html>
