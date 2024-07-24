@@ -3042,7 +3042,7 @@ button:focus {
 }
 .taxi_slider_text .left_text {
   align-self: center;
-  margin-top: -50px;
+  /* margin-top: -50px; */
 }
 .taxi_slider_text .left_text h3 {
   color: #fff;
@@ -13138,7 +13138,7 @@ input[type=number] {
 }
 
 .red{
-	color: #f80000ff;
+	color: #1517da;
 }
 .blue{
 	color: #0873ffff;
